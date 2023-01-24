@@ -1,0 +1,73 @@
+{%- for block in section.blocks -%}
+  <p class="{{ block.settings.text_alignment }}">
+    {{ block.settings.text111 | escape }}
+  </p>
+{%- endfor -%}
+ {{ section.settings.image_2 | image_url: width: 1500 | image_tag:
+        loading: 'lazy',
+        width: section.settings.image_2.width,
+        height: image_height_2,
+        class: image_class_2,
+        sizes: sizes,
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+        alt: section.settings.image_2.alt | escape
+      }}
+
+{% schema %}
+{
+  "name": "Dummy",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Dummy1",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text111",
+          "default": "Dummy",
+          "label": "TextLabel"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Center"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+    "name": "Custom dummy1"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,65 @@
+.header--middle-left {
+	grid-template-columns: 1fr auto auto;
+}
+
+.header__menu-item {
+	padding: 1.2rem 1.6rem;
+}
+
+.banner__heading {
+  font-family: 'Caveat', cursive;
+	-webkit-text-stroke-width: thin;
+	-webkit-text-stroke-color: black;
+}
+
+.banner__text {
+	font-family: 'Rowdies', cursive;
+}
+
+.subtitle {
+	font-size: 2.1rem;
+}
+
+.color-cmn-bg {
+	background: #f03d3d;
+	background: -webkit-linear-gradient(top left, #f03d3d, #010101);
+	background: -moz-linear-gradient(top left, #f03d3d, #010101);
+	background: linear-gradient(to bottom right, #f03d3d, #010101);
+}
+
+.collection__title .title,
+.collection__title {
+	color: #fff;
+}
+
+.product-deco .full-unstyled-link,
+.product-deco .price {
+	color: #fff;
+}
+
+.product_pg_txt .full-unstyled-link,
+.product_pg_txt .price {
+	color: #000;
+}
+
+.all-blog-post {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+	row-gap: 30px;
+}
+
+.article-card-wrapper .card {
+	flex-direction: row !important;
+	column-gap: 30px;
+}
+
+.page-width--narrow {
+	max-width: 87rem;
+}
+
+@media screen and (max-width: 989px) {
+	.header--middle-left {
+		grid-template-columns: auto auto auto;
+	}
+}
